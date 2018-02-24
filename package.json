@@ -3,11 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "apollo-boost": "^0.1.1",
+    "apollo-cache-inmemory": "^1.1.9",
+    "apollo-client": "^2.2.5",
     "auth0-js": "^9.3.0",
+    "downshift": "^1.28.0",
+    "graphql": "^0.13.1",
     "history": "^4.7.2",
+    "material-ui": "^1.0.0-beta.34",
+    "material-ui-icons": "^1.0.0-beta.17",
     "react": "^16.2.0",
+    "react-apollo": "^2.0.4",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "recompose": "^0.26.0"
   },
   "scripts": {
     "start": "react-scripts start",

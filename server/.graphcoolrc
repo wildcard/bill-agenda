@@ -1,0 +1,3 @@
+targets:
+  development: shared-eu-west-1/cje1hr7h70t990128cvmbvsop
+  default: development

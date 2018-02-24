@@ -1,0 +1,11 @@
+{
+  "schemaPath": "types.graphql",
+  "extensions": {
+    "endpoints": {
+      "development": {
+        "url": "https://api.graph.cool/simple/v1/cje1hr7h70t990128cvmbvsop",
+        "subscription": "wss://subscriptions.graph.cool/v1/cje1hr7h70t990128cvmbvsop"
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+# The following types define the data model of the example service
+# based on which the GraphQL API is generated
+
+type User @model {
+  id: ID! @isUnique
+  name: String
+
+  createdBillAgendas: [BillAgenda!]! @relation(name: "UserBillAgendas")
+  modifiedBillAgendas: [BillAgenda!]! @relation(name: "ModifiedBillAgendas")
+}
+
+type Agenda @model {
+  id: ID! @isUnique
+  name: String!
+  
+  originalId: Int!
+  billAgendas: [BillAgenda!]! @relation(name: "AgendasBills")
+}
+
+#type Bill @model {
+# id: ID! @isUnique
+# name: String!
+#}
+
+type BillAgenda @model {
+  id: ID! @isUnique    # read-only (managed by Graphcool)
+  createdAt: DateTime! # read-only (managed by Graphcool)
+  updatedAt: DateTime! # read-only (managed by Graphcool)
+  
+  agenda: Agenda! @relation(name: "AgendasBills")
+
+#  bill: Bill
+  billNumber: Int!
+
+  corrlelation: Int!
+  description: String
+
+  creator: User! @relation(name: "UserBillAgendas")
+  modifiers: [User!]! @relation(name: "ModifiedBillAgendas")
+}
+
